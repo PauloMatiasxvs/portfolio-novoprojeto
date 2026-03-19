@@ -1,0 +1,41 @@
+<div class="dark-bg">
+  <section class="wrap" id="exp">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-tag">Trajetória profissional</div>
+        <h2 class="sec-title">Experiência</h2>
+      </div>
+      <div class="sec-note">{{ experiencias.length }} empresas</div>
+    </div>
+
+    <div class="exp-list reveal">
+      <div class="exp-item" *ngFor="let exp of experiencias">
+        <div class="exp-row">
+          <div>
+            <div class="exp-co">
+              <a *ngIf="exp.empresaUrl" [href]="exp.empresaUrl" target="_blank">
+                {{ exp.empresa }} ↗
+              </a>
+              <span *ngIf="!exp.empresaUrl">{{ exp.empresa }}</span>
+            </div>
+            <div class="exp-role">{{ exp.cargo }}</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-period">{{ exp.periodo }}</div>
+            <div class="exp-local">{{ exp.local }}</div>
+          </div>
+        </div>
+        <div class="exp-desc">{{ exp.descricao }}</div>
+        <div class="tags">
+          <span
+            *ngFor="let tag of exp.tags"
+            class="tag"
+            [class.tag-r]="tag.type === 'r'"
+            [class.tag-c]="tag.type === 'c'">
+            {{ tag.label }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

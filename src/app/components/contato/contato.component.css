@@ -1,0 +1,17 @@
+.contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+h2 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+.hi { color: var(--accent); }
+.contato-desc { color: var(--muted); line-height: 1.9; font-size: .95rem; margin-bottom: 2rem; }
+.clinks { display: flex; flex-direction: column; gap: .7rem; }
+.clink { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; border: 1px solid var(--border); text-decoration: none; color: var(--fg); transition: border-color .2s; background: var(--card); position: relative; overflow: hidden; }
+.clink::before { content: ''; position: absolute; inset: 0; background: rgba(255,60,0,.06); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.clink:hover::before { transform: scaleX(1); }
+.clink:hover { border-color: var(--accent); }
+.clink-icon { font-family: 'Space Mono', monospace; font-size: .56rem; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; min-width: 58px; position: relative; z-index: 1; }
+.clink-val  { font-size: .83rem; color: var(--muted); position: relative; z-index: 1; }
+.form { display: flex; flex-direction: column; gap: .85rem; }
+.field { background: var(--card); border: 1px solid var(--border); padding: .9rem 1rem; color: var(--fg); font-family: 'Syne', sans-serif; font-size: .88rem; outline: none; transition: border-color .2s, box-shadow .2s; width: 100%; }
+.field:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,60,0,.08); }
+.field::placeholder { color: #444; }
+textarea.field { min-height: 120px; resize: vertical; }
+@media (max-width: 920px) { .contato-grid { grid-template-columns: 1fr; gap: 3rem; } }

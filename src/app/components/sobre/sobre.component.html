@@ -1,0 +1,49 @@
+<section class="wrap" id="sobre">
+  <div class="sobre-grid">
+    <div class="reveal-left">
+      <div class="ghost-num">01</div>
+      <div class="sec-tag">Sobre mim</div>
+      <h2 class="sec-title">Código que resolve<br>problemas reais.</h2>
+      <p>Formado em Análise e Desenvolvimento de Sistemas pela UNINASSAU (2023–2025), atuo como Programador .NET e Delphi JR III na <strong>MXM Sistemas</strong> desde julho de 2025, em modelo 100% remoto.</p>
+      <p>Tenho experiência no ciclo completo: APIs robustas, bancos de dados relacionais, interfaces modernas com TypeScript & Angular, integração com ERPs e dashboards de dados.</p>
+      <p>Como PCD convivendo com Artrite Juvenil, acredito que diversidade e determinação caminham juntos.</p>
+      <div class="stats">
+        <div class="stat" *ngFor="let s of stats; let i = index" #statEl>
+          <div class="stat-n">{{ s.current }}{{ s.suffix }}</div>
+          <div class="stat-l">{{ s.label }}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">∞</div>
+          <div class="stat-l">Curiosidade</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal-right">
+      <div class="stack-panel">
+        <div class="sl">// Stack atual — MXM Sistemas</div>
+        <div class="sv">C#/.NET · Delphi 7 · Oracle PL/SQL · NHibernate · TypeScript · Angular</div>
+        <div class="sdiv"></div>
+        <div class="sl">// Web Full Stack</div>
+        <div class="sv">React · JavaScript · TypeScript · Python · Node.js</div>
+        <div class="sdiv"></div>
+        <div class="sl">// Banco de dados</div>
+        <div class="sv">Oracle · SQL Server · PostgreSQL · MySQL · Firebird · SQLite</div>
+        <div class="sdiv"></div>
+        <div class="sl">// Dados & Visualização</div>
+        <div class="sv">Power BI · Pandas · Recharts · D3.js</div>
+        <div class="sdiv"></div>
+        <div class="sl">// Idiomas</div>
+        <div class="sv">Português (nativo) · Espanhol (intermediário) · Inglês (básico)</div>
+      </div>
+      <div class="employer-links">
+        <a class="emp-link" href="https://www.mxm.com.br/" target="_blank">
+          <span>Atual</span>MXM Sistemas — Programador .NET / Delphi JR III ↗
+        </a>
+        <a class="emp-link" href="https://kronne.toctarget.com.br/target/login" target="_blank">
+          <span>Cliente</span>TOC Target / Kronne — Sistema desenvolvido na FLOW ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

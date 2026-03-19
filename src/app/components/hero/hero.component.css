@@ -1,0 +1,20 @@
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 8rem 3rem 4rem; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.pcd-pill { display: inline-flex; align-items: center; gap: .5rem; border: 1px solid #1a3535; padding: .35rem .9rem; font-family: 'Space Mono', monospace; font-size: .58rem; letter-spacing: 2px; color: var(--accent2); text-transform: uppercase; margin-bottom: 1.4rem; background: rgba(0,229,255,.03); opacity: 0; animation: fadeUp .7s ease forwards .2s; }
+.pcd-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: pulse 2s ease infinite; }
+.hero-eyebrow { font-family: 'Space Mono', monospace; font-size: .7rem; color: var(--accent); letter-spacing: 5px; text-transform: uppercase; margin-bottom: .9rem; opacity: 0; animation: fadeUp .7s ease forwards .1s; }
+h1 { font-size: clamp(3.2rem, 7vw, 7rem); font-weight: 800; line-height: .93; letter-spacing: -3px; margin-bottom: 2rem; opacity: 0; animation: fadeUp .7s ease forwards .3s; }
+.outline { -webkit-text-stroke: 2px var(--fg); color: transparent; }
+.hi { color: var(--accent); }
+.typing-wrap { display: inline-block; }
+.typing-cursor { border-right: 2px solid var(--accent2); padding-right: 4px; color: var(--accent2); }
+.hero-desc { font-size: 1.05rem; color: var(--muted); max-width: 540px; line-height: 1.85; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp .7s ease forwards .5s; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; opacity: 0; animation: fadeUp .7s ease forwards .65s; }
+.hero-contacts { display: flex; flex-wrap: wrap; gap: 1.8rem; opacity: 0; animation: fadeUp .7s ease forwards .75s; }
+.hc { font-family: 'Space Mono', monospace; font-size: .6rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; text-decoration: none; transition: color .2s; }
+.hc:hover { color: var(--accent2); }
+.hc b { color: var(--accent); font-weight: 400; margin-right: .4rem; }
+.hero-scroll { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; opacity: 0; animation: fadeUp .7s ease forwards 1s; }
+.scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--accent), transparent); animation: scLine 1.8s ease infinite; }
+.scroll-txt { font-family: 'Space Mono', monospace; font-size: .55rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; }
+@media (max-width: 920px) { .hero { padding: 7rem 1.5rem 4rem; } }
+@media (max-width: 600px) { h1 { font-size: 2.8rem; letter-spacing: -1px; } }

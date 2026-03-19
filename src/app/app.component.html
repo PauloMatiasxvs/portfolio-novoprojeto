@@ -1,0 +1,44 @@
+<!-- LOADER -->
+<div id="loader" [class.hidden]="!loaderVisible">
+  <div class="l-name">Paulo Levi</div>
+  <div class="l-bar-wrap"><div class="l-bar" [style.width.%]="loaderProgress"></div></div>
+  <div class="l-pct">{{ loaderPct }}</div>
+</div>
+
+<!-- CURSOR -->
+<div id="cursor"
+  [style.left.px]="cursorX"
+  [style.top.px]="cursorY">
+</div>
+<div id="cursor-ring"
+  [style.left.px]="ringX"
+  [style.top.px]="ringY">
+</div>
+
+<!-- BACK TO TOP -->
+<div id="back-top" [class.visible]="showBackTop" (click)="scrollToTop()">↑</div>
+
+<!-- NAVBAR -->
+<app-navbar></app-navbar>
+
+<!-- PARTICLES -->
+<app-particles></app-particles>
+
+<!-- HERO -->
+<app-hero></app-hero>
+
+<!-- MARQUEE -->
+<div class="mq-wrap">
+  <div class="mq">
+    <em>✦</em> C#/.NET <em>✦</em> Delphi 7 <em>✦</em> TypeScript <em>✦</em> Angular <em>✦</em> React <em>✦</em> Python <em>✦</em> Oracle PL/SQL <em>✦</em> PostgreSQL <em>✦</em> Power BI <em>✦</em> Node.js <em>✦</em> NHibernate <em>✦</em> SQL Server <em>✦</em> Entity Framework <em>✦</em> Docker <em>✦</em>
+    C#/.NET <em>✦</em> Delphi 7 <em>✦</em> TypeScript <em>✦</em> Angular <em>✦</em> React <em>✦</em> Python <em>✦</em> Oracle PL/SQL <em>✦</em> PostgreSQL <em>✦</em> Power BI <em>✦</em> Node.js <em>✦</em> NHibernate <em>✦</em> SQL Server <em>✦</em> Entity Framework <em>✦</em> Docker <em>✦</em>
+  </div>
+</div>
+
+<!-- SEÇÕES -->
+<app-sobre></app-sobre>
+<app-experiencia></app-experiencia>
+<app-projetos></app-projetos>
+<app-skills></app-skills>
+<app-contato></app-contato>
+<app-footer></app-footer>

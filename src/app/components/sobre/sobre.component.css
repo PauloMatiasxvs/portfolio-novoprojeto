@@ -1,0 +1,21 @@
+.sobre-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 5rem; align-items: start; }
+.ghost-num { font-size: 9rem; font-weight: 800; line-height: 1; -webkit-text-stroke: 1px #1a1a1a; color: transparent; letter-spacing: -5px; user-select: none; margin-bottom: -1.5rem; }
+.sec-title { margin-bottom: 1.5rem; }
+p { color: var(--muted); line-height: 1.9; font-size: .95rem; margin-bottom: 1rem; }
+strong { color: var(--fg); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: 2rem; }
+.stat { border: 1px solid var(--border); padding: 1.2rem; background: var(--card); transition: border-color .2s, transform .2s; }
+.stat:hover { border-color: var(--accent); transform: translateY(-2px); }
+.stat-n { font-size: 1.9rem; font-weight: 800; color: var(--accent); line-height: 1; }
+.stat-l { font-size: .62rem; color: var(--muted); letter-spacing: 1px; margin-top: .3rem; font-family: 'Space Mono', monospace; text-transform: uppercase; }
+.stack-panel { border: 1px solid var(--border); padding: 2.2rem; position: relative; }
+.stack-panel::before { content: ''; position: absolute; top: -1px; left: -1px; width: 40px; height: 3px; background: var(--accent); }
+.stack-panel::after  { content: ''; position: absolute; bottom: -1px; right: -1px; width: 40px; height: 3px; background: var(--accent2); }
+.sl { font-family: 'Space Mono', monospace; font-size: .58rem; color: var(--muted); letter-spacing: 3px; text-transform: uppercase; margin-bottom: .35rem; }
+.sv { font-size: .9rem; font-weight: 700; margin-bottom: .9rem; line-height: 1.5; }
+.sdiv { height: 1px; background: var(--border); margin: .8rem 0; }
+.employer-links { display: flex; flex-direction: column; gap: .5rem; margin-top: 1.5rem; }
+.emp-link { display: flex; align-items: center; gap: .8rem; padding: .75rem 1rem; border: 1px solid var(--border); text-decoration: none; color: var(--fg); transition: border-color .2s; font-size: .82rem; }
+.emp-link:hover { border-color: var(--accent); }
+.emp-link span { font-family: 'Space Mono', monospace; font-size: .55rem; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; min-width: 45px; }
+@media (max-width: 920px) { .sobre-grid { grid-template-columns: 1fr; gap: 3rem; } }

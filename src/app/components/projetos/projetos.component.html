@@ -1,0 +1,90 @@
+<section class="wrap" id="projetos">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-tag">Código público</div>
+      <h2 class="sec-title">Projetos</h2>
+    </div>
+    <div class="sec-note">
+      <a href="https://github.com/PauloMatiasxvs?tab=repositories" target="_blank">
+        Ver todos no GitHub ↗
+      </a>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="proj-filters reveal">
+    <button
+      *ngFor="let f of filters"
+      class="filter-btn"
+      [class.active]="activeFilter === f.value"
+      (click)="setFilter(f.value)">
+      {{ f.label }}
+    </button>
+  </div>
+
+  <!-- GRID -->
+  <div class="proj-grid">
+    <div
+      *ngFor="let proj of allProjects"
+      class="proj"
+      [class.span2]="proj.featured"
+      [class.faded]="isFaded(proj)">
+
+      <div class="pnum">{{ proj.num }}</div>
+      <div class="pbar"></div>
+      <div class="ptitle">{{ proj.title }}</div>
+      <p class="pdesc">{{ proj.desc }}</p>
+
+      <div class="tags" style="margin-bottom: 1.2rem;">
+        <span
+          *ngFor="let tag of proj.tags; let i = index"
+          class="tag"
+          [class.tag-r]="proj.tagTypes[i] === 'r'"
+          [class.tag-c]="proj.tagTypes[i] === 'c'">
+          {{ tag }}
+        </span>
+      </div>
+
+      <div class="plinks">
+        <a
+          *ngFor="let link of proj.links"
+          class="plink"
+          [class.plink-live]="link.live"
+          [href]="link.url"
+          target="_blank">
+          {{ link.label }}
+        </a>
+      </div>
+
+      <div class="parr">↗</div>
+    </div>
+  </div>
+
+  <!-- EMPRESAS -->
+  <div class="client-section">
+    <div class="sec-head" style="margin-top: 5rem;">
+      <div>
+        <div class="sec-tag">Impacto real</div>
+        <h2 class="sec-title">Empresas</h2>
+      </div>
+    </div>
+    <div class="client-grid reveal">
+      <div class="client-card">
+        <div class="client-role">Empresa atual — Desenvolvedor interno</div>
+        <div class="client-name">MXM Sistemas</div>
+        <p class="client-desc">ERP de grande porte com módulos de Faturamento, Vendas, Estoque, Hospitalar e Contratos. Atendimento a clientes críticos com suporte presencial.</p>
+        <div class="plinks">
+          <a class="plink plink-live" href="https://www.mxm.com.br/" target="_blank">Visitar site ↗</a>
+        </div>
+      </div>
+      <div class="client-card">
+        <div class="client-role">Cliente da FLOW — Sistema em produção</div>
+        <div class="client-name">Kronne — TOC Target</div>
+        <p class="client-desc">Sistema de controle de produção, gestão de estoque e pedidos baseado em metodologia TOC. Em produção e acessível via login.</p>
+        <div class="plinks">
+          <a class="plink plink-live" href="https://kronne.toctarget.com.br/target/login" target="_blank">Ver sistema ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

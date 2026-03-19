@@ -1,0 +1,34 @@
+<section class="wrap" id="contato">
+  <div class="contato-grid">
+    <div class="reveal-left">
+      <div class="sec-tag">Vamos conversar</div>
+      <h2>Tem um projeto<br>em <span class="hi">mente?</span></h2>
+      <p class="contato-desc">
+        Aberto a freelas, projetos full-time e colaborações — ERPs, APIs ou dashboards. Me manda uma mensagem!
+      </p>
+      <div class="clinks">
+        <a
+          *ngFor="let c of contatos"
+          class="clink"
+          [href]="c.href"
+          target="_blank">
+          <span class="clink-icon">{{ c.icon }}</span>
+          <span class="clink-val">{{ c.val }}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="form reveal-right">
+      <input class="field" type="text"  placeholder="Seu nome"     [(ngModel)]="form.name">
+      <input class="field" type="email" placeholder="Seu e-mail"   [(ngModel)]="form.email">
+      <input class="field" type="text"  placeholder="Assunto"      [(ngModel)]="form.subject">
+      <textarea class="field"           placeholder="Sua mensagem..." [(ngModel)]="form.message"></textarea>
+      <button class="btn btn-red" (click)="send($event)">
+        <span>Enviar mensagem →</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TOAST -->
+<div id="toast" [class.show]="toastVisible">{{ toastMsg }}</div>

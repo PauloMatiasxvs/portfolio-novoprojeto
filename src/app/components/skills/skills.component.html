@@ -1,0 +1,40 @@
+<section class="wrap" id="skills">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-tag">Competências técnicas</div>
+      <h2 class="sec-title">Habilidades</h2>
+    </div>
+  </div>
+
+  <div class="skills-wrap reveal">
+    <div class="sg" *ngFor="let group of skillGroups; let gi = index">
+      <div class="sg-title">{{ group.title }}</div>
+      <div class="sr" *ngFor="let skill of group.skills; let si = index" #barEl>
+        <span>{{ skill.name }}</span>
+        <div class="sbar-bg">
+          <div class="sbar" [style.width.%]="barWidths[gi]?.[si] ?? 0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<div class="dark-bg">
+  <section class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="sec-tag">Formação complementar</div>
+        <h2 class="sec-title">Certificações</h2>
+      </div>
+      <div class="sec-note">9+ certificados</div>
+    </div>
+    <div class="certs-grid reveal">
+      <div class="cert" *ngFor="let cert of certs">
+        <div class="cert-issuer">{{ cert.issuer }}</div>
+        <div class="cert-name">{{ cert.name }}</div>
+        <div class="cert-date">{{ cert.date }}</div>
+      </div>
+    </div>
+  </section>
+</div>

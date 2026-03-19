@@ -1,0 +1,14 @@
+<nav [class.scrolled]="isScrolled">
+  <a class="nav-logo" href="#">PL.DEV</a>
+  <ul class="nav-links">
+    <li *ngFor="let item of navItems">
+      <a
+        [class.active]="activeSection === item.section"
+        (click)="navigateTo(item.section)"
+        [attr.data-section]="item.section">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+  <div class="nav-progress" [style.width.%]="scrollProgress"></div>
+</nav>

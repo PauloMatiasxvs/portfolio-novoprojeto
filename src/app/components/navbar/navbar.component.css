@@ -1,0 +1,36 @@
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 3rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s, background .3s;
+}
+nav.scrolled {
+  border-color: var(--border);
+  background: rgba(10,10,10,.97);
+  backdrop-filter: blur(14px);
+}
+.nav-logo {
+  font-family: 'Space Mono', monospace;
+  font-size: .85rem; color: var(--accent);
+  letter-spacing: 3px; text-transform: uppercase; text-decoration: none;
+}
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links a {
+  font-size: .7rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color .2s;
+  font-family: 'Space Mono', monospace; position: relative; cursor: none;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: var(--accent); transition: width .2s;
+}
+.nav-links a:hover { color: var(--fg); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+.nav-links a.active { color: var(--fg); }
+.nav-progress {
+  position: absolute; bottom: 0; left: 0;
+  height: 2px; background: var(--accent); transition: width .1s linear;
+}
+@media (max-width: 920px) { nav { padding: 1rem 1.5rem; } .nav-links { gap: 1.2rem; } }
+@media (max-width: 600px) { .nav-links { display: none; } }
