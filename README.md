@@ -18,4 +18,4 @@ Para ver localmente, sirva a pasta com qualquer servidor estático:
 python -m http.server 8080 -d site
 ```
 
-A Vercel publica `site/` direto (configurado em `vercel.json`).
+Publicado no Cloudflare Pages (https://paulolevi.pages.dev): sem comando de build, pasta de saída `site`.
